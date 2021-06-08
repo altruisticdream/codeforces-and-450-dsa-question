@@ -6,26 +6,28 @@ public class nextround {
         int n=sc.nextInt();
         int num=sc.nextInt();
         int count=0;
-        int sum=0;
+        int k=0;
+        int sum=0,summ=0;
         int[] arr=new int[n];
         for(int i=0;i<arr.length;i++) {
             arr[i] = sc.nextInt();
+            if(k!=0)
+                k=1;
 
         }
-        for(int i=0;i<arr.length;i++) {
-            sum+=arr[i];
-            if(arr[i]>num) {
+        if(k==1){
+            System.out.println("0");
+            System.exit(0);}
+        int pos=arr[num-1];
+        int i=0;
+        while(i!=n && arr[i]>=pos)
+        {
+            if(arr[i]!=0)
+            {
                 count++;
             }
-
+            i++;
         }
-        if(sum==n)
-        {
-            System.out.println(n);
-        }
-        else if(num>10)
-            System.out.println(arr.length-n);
-        else
         System.out.println(count);
 
 
