@@ -1,6 +1,6 @@
 import java.util.*;
 public class bear_weight {
-    public static void maiin(String[] args)
+    public static void main(String[] args)
     {
         Scanner sc=new Scanner(System.in);
         int a,b;
@@ -8,14 +8,14 @@ public class bear_weight {
         b=sc.nextInt();
         int lima=0,bob=0;
         int count=0;
-        do
+        lima=a;
+        bob=b;
+        while(lima<=bob)
         {
-            lima=a*3;
-            bob=b*2;
+            lima=lima*3;
+            bob=bob*2;
             count++;
-
-
-        }while (lima<=bob);
+        }
         System.out.println(count);
     }
 }
