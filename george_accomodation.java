@@ -1,18 +1,17 @@
 import java.util.*;
-public class easy_problem {
+public class george_accomodation {
     public static void main(String[] args)
     {
         Scanner sc=new Scanner(System.in);
         int n=sc.nextInt();
-        int sum=0;
+        int count=0;
         while(n-->0)
         {
             int a=sc.nextInt();
-            sum=sum+a;
+            int b=sc.nextInt();
+            if(a<b&&(b-a)>1)
+                count++;
         }
-        if(sum>=1)
-            System.out.println("HARD");
-        else
-            System.out.println("EASY");
+        System.out.println(count);
     }
 }
